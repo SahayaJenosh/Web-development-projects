@@ -1,0 +1,197 @@
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <title>Quiz</title> 
+    <script> 
+    function calculatescore(){
+                 let score = 0;
+                 let answers = {
+                        q1: "Hyper Text Markup Language", 
+                        q2: "ul",
+                        q3: "id",
+                        q4: "a",
+                        q5: "img",
+                        q6: "/",
+                        q7: "title",
+                        q8: "alt",
+                        q9: "True",
+                        q10: "br" 
+                    };
+                    for (let key in answers){
+                        const selected = document.querySelector(`input[name="${key}"]:checked`);
+                        if (selected && selected.value === answers[key]){ 
+                            score++; 
+                            } 
+                     } 
+                document.getElementById("result").innerText = "Your Score: " + score + "/10"; 
+                } 
+            </script> 
+    </head>
+    <style>
+        body{
+            background: linear-gradient(145deg,#d1ff3d,#a8f0e6);
+            font-family: 'poppins',sans-serif;
+            padding: 20px; 
+       } 
+        .ques{ 
+            background: #ffffff;
+            padding: 25px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 25px;
+            box-shadow: 0px 8px 25px rgba(0, 119, 167, 0.25); 
+        } 
+        .ques h1{
+            color: #022b3a;
+            margin-bottom: 10px; 
+        }         
+        .sub{
+            padding-left: 10px;
+            color: #2e2e2e;
+            font-size: 18px; 
+        } 
+        input[type="radio"]{
+            margin-right: 6px; 
+        }
+        button{
+            background: #00c2a8;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s ease; 
+       } 
+       button:hover{
+            background: #009b87;
+        }
+</style> 
+<body> 
+<div class="main"> 
+    <div class="ques"> 
+            <h1>Question: 1</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>What does HTML stands for ?</label><br><br> 
+                <input type="radio" name="q1" value="Hyper Text Markup Language">Hyper Text Markup Language<br> 
+                <input type="radio" name="q1" value="Hyperlinks and Text Markup Language">Hyperlinks and Text Markup Language<br> 
+                <input type="radio" name="q1" value="Home Tool Markup Language">Home Tool Markup Language<br> 
+                <input type="radio" name="q1" value="Home and Text Markup Language">Home and Text Markup Language<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 2</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>Which tag is used to define an unordered list ?</label><br><br> 
+                <input type="radio" name="q2" value="ol">ol<br> 
+                <input type="radio" name="q2" value="ul">ul<br> 
+                <input type="radio" name="q2" value="li">li<br> 
+                <input type="radio" name="q2" value="dl">dl<br> 
+            </form> 
+            </div> 
+        </div><br> 
+<div class="ques"> 
+    <h1>Question: 3</h1><br><br> 
+    <div class="sub"> 
+    <form> 
+        <label>Which attribute is used to provide a unique name to an HTML element 
+?</label><br><br> 
+                <input type="radio" name="q3" value="Class">Class<br> 
+                <input type="radio" name="q3" value="id">id<br> 
+                <input type="radio" name="q3" value="Style">Style<br> 
+                <input type="radio" name="q3" value="Name">Name<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 4</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>Which of the following tags is used to create a hyperlink ?</label><br><br> 
+                <input type="radio" name="q4" value="img">img<br> 
+                <input type="radio" name="q4" value="link">link<br> 
+                <input type="radio" name="q4" value="a">a<br> 
+                <input type="radio" name="q4" value="href">href<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+                <h1>Question: 5</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>Which HTML tag is used to embed an image in a webpage ?</label><br><br> 
+                <input type="radio" name="q5" value="picture">picture<br> 
+       <input type="radio" name="q5" value="image">image<br> 
+        <input type="radio" name="q5" value="img">img<br> 
+        <input type="radio" name="q5" value="src">src<br> 
+    </form> 
+    </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 6</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>Which character is used to indicate the closure of a tag in HTML ?</label><br><br> 
+                <input type="radio" name="q6" value="#">#<br> 
+                <input type="radio" name="q6" value="!">!<br> 
+                <input type="radio" name="q6" value="\">\<br>                 <input type="radio" name="q6" value="/">/<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 7</h1><br><br> 
+             <div class="sub"> 
+            <form> 
+                <label>Which HTML element is used to define the title of a document, displayed in the browser's title bar or tab ?</label><br><br> 
+                <input type="radio" name="q7" value="head">head<br> 
+                <input type="radio" name="q7" value="body">body<br> 
+                <input type="radio" name="q7" value="title">title<br> 
+                <input type="radio" name="q7" value="meta">meta<br> 
+            </form> 
+            </div> 
+        </div><br> 
+<div class="ques"> 
+    <h1>Question: 8</h1><br><br> 
+    <div class="sub"> 
+    <form> 
+        <label>Which attribute is used with the <img> tag to display alternative text if the image cannot be loaded ?</label><br><br> 
+                <input type="radio" name="q8" value="src">src<br> 
+                <input type="radio" name="q8" value="href">href<br> 
+                <input type="radio" name="q8" value="alt">alt<br> 
+                <input type="radio" name="q8" value="title">title<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 9</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>To open a link in a new browser window or tab, _blank should be added to the <a> tag.</label><br><br> 
+                <input type="radio" name="q9" value="True">True<br> 
+                <input type="radio" name="q9" value="False">False<br> 
+            </form> 
+            </div> 
+        </div><br> 
+        <div class="ques"> 
+            <h1>Question: 10</h1><br><br> 
+            <div class="sub"> 
+            <form> 
+                <label>Which HTML tag is used to define a line break ?</label><br><br> 
+                <input type="radio" name="q10" value="lb">lb<br> 
+                <input type="radio" name="q10" value="break">break<br> 
+                <input type="radio" name="q10" value="br">br<br> 
+       <input type="radio" name="q10" value="linebreak">linebreak<br> 
+    </form> 
+    </div> 
+</div><br><br> 
+<center> 
+            <button type="button" onclick="calculatescore()">Submit</button> 
+            <h2 id="result"></h2> 
+        </center> 
+    </div> 
+    </body> 
+</html>
